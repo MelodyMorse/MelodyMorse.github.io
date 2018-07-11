@@ -9,7 +9,7 @@
 @import "variables";
 $bkgcolor: #212c39;
 $activeLinkColor: #0080ff;
-&footerBkgColor: $1b232a;
+$footerBkgColor: #1b232a;
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -279,7 +279,7 @@ nav {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: $footerBkgColor;
-	
+
    position: fixed;
    left: 0;
    bottom: 0;
