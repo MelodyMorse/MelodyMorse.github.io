@@ -8,6 +8,7 @@
 @import "reset";
 @import "variables";
 $bkgcolor: #212c39;
+$activeLinkColor: #0080ff;
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -70,11 +71,11 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $white;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: $activeLinkColor;
   }
 }
 
