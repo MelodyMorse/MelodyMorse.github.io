@@ -5,6 +5,10 @@ categories: Devlog
 img: KuiperBeltVisuals.png  
 ---
 
-Updating the visuals of Kuiper Belt.  I think I made good progress yesterday
-<img src = "{{ site.url }}/images/KuiperBeltVisuals.png">
-<img src = "{{ site.url }}/images/KuiperBeltOld.png">
+<p>Updating the visuals of Kuiper Belt.  I think I've made good progress</p>
+<p>Before:
+<br>
+<img src = "{{ site.url }}/images/KuiperBeltOld.png"></p>
+<p>After:
+<br>
+<img src = "{{ site.url }}/images/KuiperBeltVisuals.png"></p>
