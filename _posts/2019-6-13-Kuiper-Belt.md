@@ -2,7 +2,7 @@
 layout: post
 title: Kuiper Belt
 categories: Game
-featured_img: {{ site.url }}/images/KuiperBeltVisuals.png  
+img: KuiperBeltVisuals.png  
 ---
 
 <img src = "{{ site.url }}/images/KuiperBeltVisuals.png">
