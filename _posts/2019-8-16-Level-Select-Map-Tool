@@ -2,8 +2,7 @@
 layout: post
 title: Kuiper Belt
 categories: Game
-img: GameModeMap.png  
-published: false
+img: GameModeMap.png
 ---
 
 <img src = "{{ site.url }}/images/GameModeMap.png">
