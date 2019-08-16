@@ -3,6 +3,7 @@ layout: post
 title: Level Select Map Tool
 categories: Game
 img: GameModeMap.png
+published: true
 ---
 
 I've been developing a tool for creating level select maps in Unity.  I'm especially proud of the custom Gizmo I designed which visualizes the connections between each map node.
