@@ -6,8 +6,17 @@ layout: default
   {% for post in site.categories.Game %}
     <article class="post">
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-      <a href="{{ site.baseurl }}{{ post.url }}"><img src= "images/{{post.img}}"</a>
-      <p>{{post.description}}</p>
+      <div class = "thumbnail">
+        <img src= "images/{{post.img}}"  /> 
+      </div>
+
+      <div class="entry">
+
+        {{ post.description }}
+
+
+      </div>
+       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}
 </div> 
