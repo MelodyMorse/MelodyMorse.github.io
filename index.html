@@ -5,9 +5,9 @@ layout: default
 <div class="posts">
   {% for post in site.categories.Game %}
     <article class="post">
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
       <a href="{{ site.baseurl }}{{ post.url }}"><img src= "images/{{post.img}}" style = "border-radius: 10px; height: 100px"/></a>
-      {{post.description}}
+      <p>{{post.description}}</p>
     </article>
   {% endfor %}
 </div> 
