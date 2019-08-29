@@ -4,6 +4,7 @@ title: Level Select Map Tool
 categories: Game
 img: GameModeMap.PNG
 published: true
+description: A tool for creating level select maps in Unity 
 ---
 
 I've been developing a tool for creating level select maps in Unity.  
