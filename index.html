@@ -6,7 +6,7 @@ layout: default
   {% for post in site.categories.Game %}
     <article class="post">
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-      <a href="{{ site.baseurl }}{{ post.url }}"><img src= "images/{{post.img}}" style = "border-radius: 10px; height: 100px"/></a>
+      <a href="{{ site.baseurl }}{{ post.url }}"><img src= "images/{{post.img}}"</a>
       <p>{{post.description}}</p>
     </article>
   {% endfor %}
