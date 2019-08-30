@@ -4,20 +4,13 @@ layout: default
 
 <div class="posts">
   {% for post in site.categories.Game %}
-  <div class="left-side-portfolio" style="display: inline-block; background-color: blue; width: 25% height: 100px"> </div>
-  <div class="right-side-portfolio" style="display: inline-block; background-color: red; width: 25% height: 100px"></div>
-      <--!<article class="post">
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-      <div class = "thumbnail">
-        <img src= "{{ site.baseurl }}images/{{post.img}}"  /> 
-      </div>
-
-      <div class="entry">
-
-        {{ post.description }}
-
-
-      </div> -->
+  <div class="left-side-portfolio" style="display: inline-block; background-color: blue; width: 25% height: 100px"> 
+    <h2>Left</h2>
+  </div>
+  <div class="right-side-portfolio" style="display: inline-block; background-color: red; width: 25% height: 100px">
+    <h2>Right</h2>
+  </div>
+     
        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}
