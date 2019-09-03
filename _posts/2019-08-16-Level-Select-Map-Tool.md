@@ -18,5 +18,17 @@ Here's a little bit about how it works
 <img src= "{{ site.url }}/images/EasyMapsScreenCap1.PNG">
 <img src= "{{ site.url }}/images/EasyMapsScreenCap4.PNG">
 <img src= "{{ site.url }}/images/EasyMapsScreenCap5.PNG">
+
+<pre>
+  <code>
+        public struct DirectionInfo
+    {
+        public bool hasExit;
+        public MapNode neighbor;        
+    }
+  </code>
+</pre>
+
 Credits: 
 The sprites I used are from [kenney.nl](kenny.nl)'s [Map Pack](https://opengameart.org/content/map-pack-180-assets)
+
