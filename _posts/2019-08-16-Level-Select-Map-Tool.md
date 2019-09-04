@@ -11,31 +11,9 @@ I've been developing a tool for creating level select maps in Unity.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rXEC9h_hQpM" frameborder="0" allowfullscreen></iframe>
 
-I'm especially proud of the custom Gizmo I designed which visualizes the connections between each map node.
-<img src = "{{ site.url }}/images/MapGizmo.PNG">
+EasyMaps is a tool to help you create Level Select Maps in Unity. 
 
-Here's a little bit about how it works
-
-EasyMaps is a tool to help you create Level Select Maps in Unity. The EasyMaps namespace contains an Enum Direction. The use of this enum will make it easy to add additional directions (for example NorthEast) in future updates.
-<pre>
-  <code>
-    enum Direction {East, South, West, North };
-  </code>
-</pre>
-
-
-
-
-The namespace also contains struct DirectionInfo
-<pre>
-  <code>
-        public struct DirectionInfo
-    {
-        public bool hasExit;
-        public MapNode neighbor;        
-    }
-  </code>
-</pre>
+Here's a little bit about how it works:
 
 The map is composed of objects called Map Nodes that have a script with class MapNode attached. Each instance of the MapNode class contains an array of four DirectionInfos, one for each cardinal direction. The user can set hasExit in any of these DirectionInfos to true in the inspector to have the Map Node attempt to find the nearest node in the corresponding direction and make a connection that the player will be able to traverse
 
@@ -46,26 +24,39 @@ Here is a scene with 2 mapNodes side by side.  The gizmos on the nodes have an X
 MapNode2 is to the East (right) of MapNode1. So in order to connect them the user only has to set hasExit on MapNode1’s Direction Infos’ Element 0 to true and MapNode1 will connect itself to MapNode2.  Alternatively the user could set hasExit on MapNode2’s Direction Infos’ Element 2 to true
 
 <img src= "{{ site.url }}/images/EasyMapsScreenCap4.PNG">
-<img src= "{{ site.url }}/images/EasyMapsScreenCap5.PNG">
+<img src= "{{ site.url }}/images/EasyMapsScreenCap5.png">
 
+This script is what allows the nodes to connect to each other: 
 <pre>
   <code>
-     public class MapNode : MonoBehaviour
+namespace EasyMaps
+{
+    enum Direction { East, South, West, North };
+
+    [System.Serializable]
+    public struct DirectionInfo
+    {
+        public bool hasExit;
+        public MapNode neighbor;        
+    }
+
+    public class MapNode : MonoBehaviour
     {
         [SerializeField]
         LayerMask mapLayerMask;
+
         public DirectionInfo[] directionInfos = new DirectionInfo[4];
         
-         private void OnValidate()
+        private void OnValidate()
         {
             // Connect or attempt to connect to all neighbors
-            foreach (Direction d in (Direction[]) Enum.GetValues(typeof(Direction)))
+            foreach (Direction d in (Direction[])Enum.GetValues(typeof(Direction)))
             {
                 ConnectNeighbors(d);
             }
         }
-        
- private void ConnectNeighbors(Direction dir)
+
+        private void ConnectNeighbors(Direction dir)
         {
             Vector2 v2 = Vector2.zero;
             //get vector2 for raycast2D
@@ -77,7 +68,6 @@ MapNode2 is to the East (right) of MapNode1. So in order to connect them the use
             DirectionInfo info = directionInfos[(int)dir];
             if (directionInfos[(int)dir].hasExit)
             {
-
                 //connect this to neighboring node
                 directionInfos[(int)dir].neighbor = FindNeighbor(v2);
                 //connect neighboring node to this
@@ -94,8 +84,8 @@ MapNode2 is to the East (right) of MapNode1. So in order to connect them the use
                 
             }
         }
-        
-         private MapNode FindNeighbor(Vector2 dir)
+
+        private MapNode FindNeighbor(Vector2 dir)
         {    
             RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, Mathf.Infinity, mapLayerMask);
             if (hit)
@@ -107,6 +97,7 @@ MapNode2 is to the East (right) of MapNode1. So in order to connect them the use
                 return null;
             }
         }
+
         private void SetNeighbor(Direction other)
         {
             //initialize self as East.  Value will change in if/else if statements if necessary
@@ -122,7 +113,9 @@ MapNode2 is to the East (right) of MapNode1. So in order to connect them the use
             directionInfos[(int)other].neighbor.directionInfos[(int)self].hasExit = true;
             directionInfos[(int)other].neighbor.directionInfos[(int)self].neighbor = this;
         }
-      }
+ 
+    }
+}
   </code>
 </pre>
 
