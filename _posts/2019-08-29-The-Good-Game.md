@@ -5,7 +5,7 @@ categories: Game
 img: TheGoodGameCover.PNG  
 description: A good game. A 2D Platformer.
 ---
-
+<img src= "{{ site.url }}/images/TheGoodGameCover.PNG">
 Ongoing project
 
 Currently working on:
