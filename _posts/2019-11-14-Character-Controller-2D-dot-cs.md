@@ -4,7 +4,9 @@ title: Character Controller 2D dot cs
 categories: Devlog
 img: characterControllerGizmo.PNG
 ---
+{% include CaptionedImage.html url="/images/characterControllerGizmo.PNG" description="Gizmo showing jump arc" %}
 {% include CaptionedImage.html url="/images/characterControllerDrawerOriginal.PNG" description="Original version" %}
+{% include CaptionedImage.html url="/images/characterControllerDrawerNew.PNG" description="My modification" %}
 I was inspired to do a little work on Brackey's 2D Character controller that I think makes the script more user friendly
 
 Major changes Fields: m_jumpForce has been replaced with jumpHeight, which stores the number of units the character's jump height is to be. runSpeed has been moved from PlayerMovement.cs to CharacterController2D.cs. I thought it was akward how runSpeed was the only field related to adjusting character movement that wasn't on the character controller script so I moved it. Character will now run at runSpeed units per second.
