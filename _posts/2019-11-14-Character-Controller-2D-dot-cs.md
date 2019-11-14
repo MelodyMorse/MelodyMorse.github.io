@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Character Controller 2D dot cs
+categories: Devlog
+img: characterControllerGizmo.PNG
 ---
 {% include CaptionedImage.html url="/images/characterControllerDrawerOriginal.PNG" description="Original version" %}
 I was inspired to do a little work on Brackey's 2D Character controller that I think makes the script more user friendly
