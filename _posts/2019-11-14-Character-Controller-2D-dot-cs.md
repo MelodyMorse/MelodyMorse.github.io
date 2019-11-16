@@ -18,16 +18,19 @@ Lastly, I designed a custom gizmo for the character controller that displays the
 
 {% include CaptionedImage.html url="/images/characterControllerGizmo.PNG" description="Gizmo showing jump arc" %}
 
-####What Did I Learn?
+#### What Did I Learn?
 
 In short, that Brackey’s character controller still isn’t adequate for the platformer I eventually want to make.  He designed the character with a CircleCollider2D on the bottom half.  This was at least partly to handle slopes easily, but it makes it so that the player slips off of edges.  There’s also some quirks that come with using Unity’s colliders for a 2D platformer: Getting stuck on platforms and stuff like that.  There are fixes you can do using physics materials, but the process just kinda feels like a hack to me
 
-####What’s next?
+#### What’s next?
 
 Use math to create my own system of physics and checking for collisions. The game I have in mind would just be complicated by all the bells and whistles of Unity’s 2DPhysics system and I’ll get the control I want more easily just by managing that stuff myself
 
-####Links
+#### Links
 [Original version repo](https://github.com/Brackeys/2D-Movement)
+
 [Fork with my modifications](https://github.com/MelodyMorse/2D-Movement)
+
 [Brackey’s accompanying tutorial](https://www.youtube.com/watch?v=dwcT-Dch0bA&t=289s) 
+
 [Sunnyland Assets](https://assetstore.unity.com/packages/2d/characters/sunny-land-103349?aid=1101lPGj&cid=1101l6H2CqBR&utm_source=aff) 
