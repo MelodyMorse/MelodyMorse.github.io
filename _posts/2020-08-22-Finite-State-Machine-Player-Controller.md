@@ -10,6 +10,6 @@ description: A good game. A 2D Platformer.
 <iframe src="https://itch.io/embed/735252" width="552" height="167" frameborder="0"><a href="https://maxmorse.itch.io/finite-state-machine-character-controller-demo">Finite State Machine Character Controller Demo by Max Morse</a></iframe>
 
 [Repo](https://github.com/MaxMorse/Finite-State-Machine)
-
+<!--more-->
 Assets: [SunnyLand Forest by Ansimuz](https://ansimuz.itch.io/sunnyland-forest)
 
